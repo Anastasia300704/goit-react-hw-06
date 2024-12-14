@@ -1,28 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// Початковий стан (наприклад, масив контактів)
-const initialState = [];
-
-// Створення slice для контактів
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState,
+  initialState: [],
   reducers: {
     addContact: (state, action) => {
-      state.push(action.payload);
-    },
-    removeContact: (state, action) => {
-      return state.filter(contact => contact.id !== action.payload);
+      state.push(action.payload); // Тут додаємо контакт в масив
     },
     deleteContact: (state, action) => {
-      return state.filter(contact => contact.id !== action.payload);
-    }
-  }
+      return state.filter(contact => contact.id !== action.payload); // Видаляємо контакт
+    },
+  },
 });
 
-// Селектор для отримання всіх контактів
-export const selectContacts = (state) => state.contacts;  // Вибираємо контакти з глобального стану
-
-// Експортуємо дії та редюсер
-export const { addContact, removeContact, deleteContact } = contactsSlice.actions;
+export const { addContact, deleteContact } = contactsSlice.actions;
+export const selectContacts = state => state.contacts;
 export const contactsReducer = contactsSlice.reducer;
