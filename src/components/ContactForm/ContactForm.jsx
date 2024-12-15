@@ -8,9 +8,9 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
-  dispatch(addContact({...values, id: nanoid()})); 
-  resetForm(); 
- };
+    dispatch(addContact({...values, id: nanoid()})); 
+    resetForm(); 
+  };
 
   return (
     <Formik
