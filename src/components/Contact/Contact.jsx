@@ -14,3 +14,5 @@ const Contact = ({ name , number, id }) => {
  </li>
  );
 };
+
+export default Contact;
