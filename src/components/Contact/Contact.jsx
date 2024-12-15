@@ -1,4 +1,4 @@
-const Contact = ({ name , number, id }) => {
+export const Contact = ({ name , number, id }) => {
   const dispatch = useDispatch();
 
 
@@ -14,5 +14,6 @@ const Contact = ({ name , number, id }) => {
     </li>
   );
 };
+ 
 
  
