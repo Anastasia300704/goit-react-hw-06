@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contactsSlice';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import { nanoid } from 'nanoid';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
